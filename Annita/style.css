@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #4CAF50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #d4ffd9;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1602524816432-7d26cf0e9ff2?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .btn {
+    padding: 0.8rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: white;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .produto-card {
+    padding: 2rem;
+    background: #f0fff4;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .produto-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: #4CAF50;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  /* Ajustando tamanhos e espaçamentos */
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    line-height: 1.7;
+    font-size: 18px; /* Aumentei a fonte base */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1602524816432-7d26cf0e9ff2?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    min-height: 100vh; /* Antes era 90vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 5rem 1rem; /* Adicionado padding extra */
+  }
+  
+  .hero h2 {
+    font-size: 4rem; /* Maior o título */
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .hero p {
+    font-size: 1.5rem; /* Texto de apoio maior */
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .btn {
+    padding: 1rem 2.5rem; /* Botão maior */
+    font-size: 1.2rem;
+  }
+  
+  /* Seções gerais */
+  .section {
+    padding: 6rem 2rem; /* Seções mais altas */
+    margin-bottom: 3rem;
+  }
+  
+  /* Produtos */
+  .produto-card {
+    padding: 3rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 2rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Nav */
+  .nav-links {
+    gap: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+  }
+  
+  #whatsappButton {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #whatsappButton:hover {
+    background-color: #1ebe5b;
+    transform: scale(1.05);
+  }
+
+  #whatsappIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
