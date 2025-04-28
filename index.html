@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazenda Annita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <h1 class="logo">Fazenda Annita</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Natureza, Tradição e Qualidade</h2>
+      <p>Descubra a excelência da vida no campo com a Fazenda Annita!</p>
+      <a href="#contato" class="btn">Fale Conosco</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section sobre">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>A Fazenda Annita é dedicada à agricultura sustentável, cultivando alimentos saudáveis com amor e respeito à natureza há mais de 30 anos.</p>
+    </div>
+  </section>
+
+  <section id="produtos" class="section produtos">
+    <div class="container">
+      <h2>O Que Produzimos</h2>
+      <div class="produtos-grid">
+        <div class="produto-card">
+          <h3>Açai</h3>
+          <p>Açai de qualidade, o ano todo.</p>
+        </div>
+        <div class="produto-card">
+          <h3>Cacau</h3>
+          <p>Cacau</p>
+        </div>
+        <div class="produto-card">
+          <h3>Pimenta do reino</h3>
+          <p>Colhidas com cuidado e sem agrotóxicos.</p>
+        </div>
+        <div class="produto-card">
+          <h3>Vaquinhas</h3>
+          <p>Da horta para a sua mesa, com qualidade garantida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section contato">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Mande um e-mail para: <a href="mailto:contato@fazendaanitta.com">contato@fazendaanitta.com</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fazenda Annita. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="whatsappButton">
+    <img id="whatsappIcon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  
+  </button>
+  
+  <script>
+    const phoneNumber = "559186459682"; // Número no formato internacional (exemplo: +55 11 99999-9999)
+  
+    document.getElementById("whatsappButton").addEventListener("click", function() {
+      const whatsappUrl = `https://wa.me/${phoneNumber}`;
+      window.open(whatsappUrl, "_blank");
+    });
+  </script>
+  
+</body>
+</html>
